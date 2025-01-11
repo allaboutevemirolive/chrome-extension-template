@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Extension Template",
+  "version": "1.0.0",
+  "description": "Chrome Extansion Template setup with Vite-TypeScript-React + content script.",
+  "action": {
+    "default_popup": "index.html"
+  },
+  "permissions": [],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://chatgpt.com/*"
+      ],
+      "js": [
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ]
+}
