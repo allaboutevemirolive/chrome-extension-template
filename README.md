@@ -2,8 +2,6 @@
 
 A modern template for building Chrome extensions, powered by **Vite**, **React**, **TypeScript**, and **pnpm**, with a pre-configured `content.ts` for content scripts.
 
----
-
 ## ✨ Features
 
 - 🚀 **Vite** for ultra-fast builds and hot module replacement.
