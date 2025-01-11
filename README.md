@@ -1,11 +1,12 @@
-# Chrome Extension Template
+# Chrome Extension Template  
 
-A modern template for building Chrome extensions, powered by **Vite**, **React**, **TypeScript**, and **pnpm**, with a pre-configured `content.ts` for content scripts.
+A comprehensive template for building Chrome extensions using **Vite**, **React**, and **TypeScript**. This template also includes **pnpm** for efficient package management and **TailwindCSS** for streamlined styling.  
 
-## ✨ Features
+## Features  
 
-- 🚀 **Vite** for ultra-fast builds and hot module replacement.
-- ⚛️ **React** for building dynamic user interfaces.
-- 🦾 **TypeScript** for a strong, type-safe development experience.
-- 📜 Pre-configured `content.ts` for injecting scripts into web pages.
-- 📦 **pnpm** for efficient and fast dependency management.
+- ⚡ **Vite** for fast development and build processes.  
+- ⚛️ **React** for creating dynamic user interfaces.  
+- 🦾 **TypeScript** for type safety and better developer productivity.  
+- 📜 Pre-configured `content.ts` for content script integration.  
+- 🌀 **TailwindCSS** for modern, utility-first CSS styling.  
+- 🚀 **pnpm** for faster, disk-efficient dependency management.  
