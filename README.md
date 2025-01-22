@@ -10,6 +10,7 @@ This Chrome extension template comes with the following features and tools:
 - **Service Worker** for background tasks.  
 - **Content Script** for interacting with web pages.  
 - `"@"` as a path alias for cleaner imports.  
+- Include Auto build script `./scripts/watch-build.sh`
 - Pre-configured and ready to use.  
 - Battle-tested for reliability.  
 
@@ -19,6 +20,29 @@ Here are some important files you might want to review:
 - `public/manifest.json`: The extension's manifest file.  
 - `package.json`: Project dependencies and scripts.  
 - `tailwind.config.js`: Configuration for TailwindCSS.  
+
+## **About the Auto-Build Script**  
+
+This project uses `./scripts/watch-build.sh` instead of `tsc -b --watch` for building the extension.  
+
+### **Why Use a Custom Script?**  
+- **Chrome Extension Specific Needs:**  
+  `tsc` is great for general TypeScript projects but doesn't handle tasks like bundling or minifying files, which are crucial for extensions.  
+
+- **File-Specific Handling:**  
+  - **`content-script.js`:** Must be bundled as a standalone script (no ES modules).  
+  - **`service-worker.js`:** Supports ES modules but benefits from optimization.  
+
+- **Integrated Process:**  
+  The custom script simplifies bundling, minification, and compression, ensuring the build process fits Chrome extension requirements.  
+
+### **tsc and vite build**
+
+Additioanlly, you can use `pnpm watch` or the line below to make sure our project is compile correctly instead of using Auto-Build Script.
+
+```json
+"watch": "concurrently \"tsc -b --watch\" \"vite build --watch\""
+```
 
 ## **Take Note**  
 
