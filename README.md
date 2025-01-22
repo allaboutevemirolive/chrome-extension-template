@@ -38,10 +38,10 @@ This project uses `./scripts/watch-build.sh` instead of `tsc -b --watch` for bui
 
 ### **tsc and vite build**
 
-Additioanlly, you can use `pnpm watch` or the line below to make sure our project is compile correctly instead of using Auto-Build Script.
+If you prefer not to use the Auto-Build Script, you can still ensure the project compiles correctly using `pnpm watch`(check `package.json`) or the following command:
 
-```json
-"watch": "concurrently \"tsc -b --watch\" \"vite build --watch\""
+```sh
+tsc -b --watch vite build --watch
 ```
 
 ## **Take Note**  
