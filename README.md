@@ -10,7 +10,7 @@ This Chrome extension template comes with the following features and tools:
 - **Service Worker** for background tasks.  
 - **Content Script** for interacting with web pages.  
 - `"@"` as a path alias for cleaner imports.  
-- Include Auto build script `./scripts/watch-build.sh`
+- Include Auto-Build Script `./scripts/watch-build.sh`
 - Pre-configured and ready to use.  
 - Battle-tested for reliability.  
 
