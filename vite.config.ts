@@ -25,7 +25,8 @@ export default defineConfig({
         rollupOptions: {
             input: {
                 main: './index.html',
-                content: './src/content.ts'
+                "content-script": './src/content-script.ts',
+                "service-worker": './src/service-worker.ts'
             },
             output: {
                 entryFileNames: '[name].js',

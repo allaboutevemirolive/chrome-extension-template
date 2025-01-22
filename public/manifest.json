@@ -3,17 +3,24 @@
   "name": "Chrome Extension Template",
   "version": "1.0.0",
   "description": "Chrome Extansion Template setup with Vite-TypeScript-React + content script.",
+  "author": {
+    "email": "user@example.com"
+  },
   "action": {
     "default_popup": "index.html"
   },
   "permissions": [],
+  "background": {
+    "service_worker": "service-worker.js",
+    "type": "module"
+  },
   "content_scripts": [
     {
       "matches": [
         "<all_urls>"
       ],
       "js": [
-        "content.js"
+        "content-script.js"
       ],
       "run_at": "document_idle"
     }
