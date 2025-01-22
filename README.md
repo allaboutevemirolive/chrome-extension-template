@@ -1,5 +1,30 @@
 # Chrome Extension Template  
 
+## **Commands**  
+
+To compile the project, navigate to the root directory and run:  
+
+```sh
+pnpm build
+```
+This will create a `build` folder. You can use this folder to `Load Unpacked` in `chrome://extensions/`.
+
+### **Auto-Build with `watch-build.sh`**  
+
+For automatic builds whenever you make changes, use the `watch-build.sh` script located in the `scripts` folder.  
+
+#### **Example:**  
+1. Make the script executable:  
+   ```sh
+   chmod +x ./scripts/watch-build.sh
+   ```  
+
+2. Run the script:  
+   ```sh
+   ./scripts/watch-build.sh ./my-project 'pnpm build'
+   ```  
+This will rebuild the project every time you make updates.  
+
 ## **What's Included in This Template?**  
 This Chrome extension template comes with the following features and tools:  
 - **TypeScript** for type safety.  
