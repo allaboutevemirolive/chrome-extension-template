@@ -20,6 +20,21 @@ Here are some important files you might want to review:
 - `package.json`: Project dependencies and scripts.  
 - `tailwind.config.js`: Configuration for TailwindCSS.  
 
+## **Take Note**  
+
+When working with `content-script.js` and `service-worker.js`, you need to use two different Chrome consoles.  
+
+### **1. For `content-script.js`**  
+- Use the standard Chrome DevTools console.  
+- Inspect any website where your content script is running to access the console.  
+
+### **2. For `service-worker.js`**  
+To access the console for `service-worker.js`:  
+1. Navigate to `chrome://extensions/`.  
+2. Enable **Developer mode** (toggle it at the top-right corner).  
+3. Find your extension on the same page and click **Inspect views: service worker**.  
+4. A new developer console will open, where you can view logs and debug your service worker.  
+
 ## A bit of reading
 
 A Chrome extension has three main parts:
