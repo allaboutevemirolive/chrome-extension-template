@@ -13,17 +13,12 @@ This Chrome extension template comes with the following features and tools:
 - Pre-configured and ready to use.  
 - Battle-tested for reliability.  
 
----
-
 ## **Key Files to Check in This Project**  
 Here are some important files you might want to review:  
 - `vite.config.ts`: Configuration for Vite.  
 - `public/manifest.json`: The extension's manifest file.  
 - `package.json`: Project dependencies and scripts.  
 - `tailwind.config.js`: Configuration for TailwindCSS.  
-
-
----
 
 ## A bit of reading
 
@@ -36,8 +31,6 @@ A Chrome extension has three main parts:
 The `popup.html` or `main.tsx` is simple and easy to understand for any frontend developer, so it doesn’t need much explanation.  
 
 This guide will focus on `content-script.js` and `service-worker.js`.  
-
----
 
 ## Default Behaviors
 
@@ -57,8 +50,6 @@ This guide will focus on `content-script.js` and `service-worker.js`.
 ```
 For more details, see [service-worker.js documentation](https://developer.chrome.com/docs/extensions/reference/manifest/background).
 
----
-
 ### **Content Scripts (`content-script.js`/`content.js`)**
 
 - **Default Behavior:**  
@@ -77,14 +68,9 @@ For more details, see [service-worker.js documentation](https://developer.chrome
 ```
 For more details, see [content-script.js documentation](https://developer.chrome.com/docs/extensions/reference/manifest/content-scripts).
 
-
----
-
 ## Why Are Background Scripts Treated as Modules by Default but Content Scripts Are Not?
 
 The difference between how background scripts and content scripts are treated in Chrome Extensions relates to their **execution environments**, **functionality**, and **security model**. Here's a breakdown of the key reasons:
-
----
 
 ### **1. Execution Environment**
 - **Background Scripts (Service Workers):**
@@ -96,8 +82,6 @@ The difference between how background scripts and content scripts are treated in
   - Run directly in the web page's environment, interacting with the DOM but with limited access to Chrome's APIs (they use messaging to communicate with background scripts).
   - Must work seamlessly with the web page's JavaScript, which may not support ES modules or could have conflicting variables.
   - Keeping content scripts as non-modules ensures better compatibility and avoids interfering with the page's environment.
-
----
 
 ### **2. Security Model**
 - **Background Scripts:**
@@ -142,8 +126,6 @@ The difference between how background scripts and content scripts are treated in
   - Sandboxed execution environment shared with the web page, but isolated from the Chrome extension's own environment.
   - Cannot directly use Chrome Extension APIs like `chrome.runtime` (except for specific APIs like messaging and storage).
 
----
-
 ### **Background Script**
 - **Runs in Chrome's Isolated Extension Environment:**
   - The background script (or service worker in Manifest V3) does not run in the context of any web page. Instead, it runs in an isolated environment managed by Chrome.
@@ -153,8 +135,6 @@ The difference between how background scripts and content scripts are treated in
   - Handles long-running tasks, extension lifecycle events, and manages communication between content scripts and other parts of the extension.
   - It acts as the "brain" of the extension, coordinating various components like content scripts, popup scripts, and options pages.
 
----
-
 ### **Key Differences**
 | **Aspect**            | **Content Script**                              | **Background Script**                       |
 |-----------------------|------------------------------------------------|--------------------------------------------|
@@ -163,8 +143,6 @@ The difference between how background scripts and content scripts are treated in
 | **Access to DOM?**    | Yes, can directly manipulate the page's DOM    | No, cannot access web pages' DOM           |
 | **Access to APIs?**   | Limited (e.g., `chrome.runtime`, `chrome.storage`) | Full access to Chrome Extension APIs       |
 | **Communication**     | Sends messages to background or other scripts  | Manages communication across all components |
-
----
 
 ### **Example: Communication Flow**
 1. **Content Script**: Injected into a web page, it modifies the page's DOM or extracts information.
