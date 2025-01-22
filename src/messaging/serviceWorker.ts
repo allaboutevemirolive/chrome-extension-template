@@ -17,6 +17,9 @@ export async function sendToContentScript(
     }
 }
 
+// To add a new type of message, you would simply add a new handler to the
+// handlers object in handlers.ts. The type system will ensure that all
+// necessary components are properly implemented.
 export function initializeServiceWorkerMessaging(): void {
     chrome.runtime.onMessage.addListener((message, sender, sendResponse) => {
         console.log('Service worker received message:', message);
