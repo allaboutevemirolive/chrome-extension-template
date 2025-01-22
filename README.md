@@ -85,7 +85,7 @@ For more details, see [content-script.js documentation](https://developer.chrome
 
 ## Why Are Background Scripts Treated as Modules by Default but Content Scripts Are Not?
 
-The difference between how background scripts and content scripts are treated in Chrome Extensions relates to their **execution environments**, **functionality**, and **security model**. Here's a breakdown of the key reasons:
+The difference between how background scripts and content scripts are treated in Chrome Extensions relates to their **execution environments**, **functionality**, and **security model**.
 
 ### **1. Execution Environment**
 - **Background Scripts (Service Workers):**
