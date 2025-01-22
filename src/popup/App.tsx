@@ -1,3 +1,4 @@
+import './App.css'
 import { useState } from 'react';
 import { Bell, BellOff, Settings, BarChart2, Users, Clock } from 'lucide-react';
 
