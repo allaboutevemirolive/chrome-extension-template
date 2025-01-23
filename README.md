@@ -1,5 +1,26 @@
 # Chrome Extension Template  
 
+## **What's Included in This Template?**  
+This Chrome extension template comes with the following features and tools:  
+- **TypeScript** for type safety.  
+- **pnpm** as the package manager.  
+- **Vite** for fast development and build setup.  
+- **React** for building UI components.  
+- **TailwindCSS** for styling.  
+- **Service Worker** for background tasks.  
+- **Content Script** for interacting with web pages.  
+- `"@"` as a path alias for cleaner imports.  
+- Include Auto-Build Script `./scripts/watch-build.sh`
+- Pre-configured and ready to use.  
+- Battle-tested for reliability.  
+
+## **Key Files to Check in This Project**  
+Here are some important files you might want to review:  
+- `vite.config.ts`: Configuration for Vite.  
+- `public/manifest.json`: The extension's manifest file.  
+- `package.json`: Project dependencies and scripts.  
+- `tailwind.config.js`: Configuration for TailwindCSS.  
+
 ## **Commands**  
 
 To compile the project, navigate to the root directory and run:  
@@ -24,42 +45,6 @@ For automatic builds whenever you make changes, use the `watch-build.sh` script 
    ./scripts/watch-build.sh ./my-project 'pnpm build'
    ```  
 This will rebuild the project every time you make updates.  
-
-## **What's Included in This Template?**  
-This Chrome extension template comes with the following features and tools:  
-- **TypeScript** for type safety.  
-- **pnpm** as the package manager.  
-- **Vite** for fast development and build setup.  
-- **React** for building UI components.  
-- **TailwindCSS** for styling.  
-- **Service Worker** for background tasks.  
-- **Content Script** for interacting with web pages.  
-- `"@"` as a path alias for cleaner imports.  
-- Include Auto-Build Script `./scripts/watch-build.sh`
-- Pre-configured and ready to use.  
-- Battle-tested for reliability.  
-
-## **Key Files to Check in This Project**  
-Here are some important files you might want to review:  
-- `vite.config.ts`: Configuration for Vite.  
-- `public/manifest.json`: The extension's manifest file.  
-- `package.json`: Project dependencies and scripts.  
-- `tailwind.config.js`: Configuration for TailwindCSS.  
-
-## **About the Auto-Build Script**  
-
-This project uses `./scripts/watch-build.sh` instead of `tsc -b --watch` for building the extension.  
-
-### **Why Use a Custom Script?**  
-- **Chrome Extension Specific Needs:**  
-  `tsc` is great for general TypeScript projects but doesn't handle tasks like bundling or minifying files, which are crucial for extensions.  
-
-- **File-Specific Handling:**  
-  - **`content-script.js`:** Must be bundled as a standalone script (no ES modules).  
-  - **`service-worker.js`:** Supports ES modules but benefits from optimization.  
-
-- **Integrated Process:**  
-  The custom script simplifies bundling, minification, and compression, ensuring the build process fits Chrome extension requirements.  
 
 ### **tsc and vite build**
 
