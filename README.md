@@ -71,7 +71,7 @@ To access the console for `service-worker.js`:
 
 ## **Extras and References**
 
-- [Manifest V3 guide](https://github.com/allaboutevemirolive/chrome-extension-template/blob/main/extras/MV3_Guide.md).
+- [Manifest V3 guide](https://github.com/allaboutevemirolive/chrome-extension-template/blob/main/extras/MV3_Guide.md)
 
 - [Chrome Extension API](https://developer.chrome.com/docs/extensions/reference/api)
 
