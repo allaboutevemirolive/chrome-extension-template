@@ -69,9 +69,15 @@ To access the console for `service-worker.js`:
 3. Find your extension on the same page and click **Inspect views: service worker**.  
 4. A new developer console will open, where you can view logs and debug your service worker.  
 
-## **Extras**
+## **Extras and References**
 
-Read this [Manifest V3 guide](https://github.com/allaboutevemirolive/chrome-extension-template/blob/main/extras/MV3_Guide.md).
+- Read this [Manifest V3 guide](https://github.com/allaboutevemirolive/chrome-extension-template/blob/main/extras/MV3_Guide.md).
+
+- [Chrome Extension API](https://developer.chrome.com/docs/extensions/reference/api)
+
+- [Chrome Extension Permissions](https://developer.chrome.com/docs/extensions/reference/permissions-list)
+
+- [Chrome Extension Manifest](https://developer.chrome.com/docs/extensions/reference/manifest)
 
 ## **Copyright and license**
 
