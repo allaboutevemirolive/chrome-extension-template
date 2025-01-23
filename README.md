@@ -42,7 +42,7 @@ For automatic builds whenever you make changes, use the `watch-build.sh` script 
 
 2. Run the script:  
    ```sh
-   ./scripts/watch-build.sh ./my-project 'pnpm build'
+   ./scripts/watch-build.sh ./chrome-extension-template 'pnpm build'
    ```  
 This will rebuild the project every time you make updates.  
 
