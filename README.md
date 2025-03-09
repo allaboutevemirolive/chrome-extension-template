@@ -46,14 +46,6 @@ For automatic builds whenever you make changes, use the `watch-build.sh` script 
    ```  
 This will rebuild the project every time you make updates.  
 
-### **tsc and vite build**
-
-If you prefer not to use the Auto-Build Script, you can still ensure the project compiles correctly using `pnpm watch`(check `package.json`) or the following command:
-
-```sh
-tsc -b --watch vite build --watch
-```
-
 ## **Take Note**  
 
 When working with `content-script.js` and `service-worker.js`, you need to use two different Chrome consoles.  
